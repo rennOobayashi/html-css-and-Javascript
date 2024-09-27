@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = ["apple", "banana", "apple", "orange", "banana", "apple", "apple"];
+        let cnt = 0;
+        let check_str = [];
+
+        check_str[0] = str[0];
+
+        for (let i = 1; i < str.length; i++) {
+            let check = false;
+
+            for (let j = 0; j < check_str.length; j++) {
+                if (check_str[j] == str[i]) {
+                    check = true;
+                    break;
+                }
+            }
+
+            if (!check)
+                check_str[check_str.length] = str[i];
+        }
+
+        document.write(`과일 배열: ${check_str.join(", ")}`);
+
+        document.write("<br>");
+        document.write(`중복되지 않은 과일의 수: ${check_str.length}<br>`);
+    </script>
+</body>
+</html>

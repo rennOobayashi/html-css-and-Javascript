@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li:first-child {
+            background-color: lightcoral;
+        }
+
+        li:first-child::first-letter {
+            font-size: 200%;
+            color: red;
+        }
+
+        .item:hover {
+            background-color: lightgreen;
+        }
+
+        .item::after {
+            content: " - 중요함!";
+            color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>목록#1</li>
+        <li>목록#2</li>
+        <li class="item">목록#3</li>
+    </ul>
+</body>
+</html>

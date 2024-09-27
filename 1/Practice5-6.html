@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes circle {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes half_circle {
+            0% { transform: rotate(-90deg); }
+            50% { transform: rotate(90deg); }
+            100% { transform: rotate(-90deg); }
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        #rotate1 {
+            animation-name: circle;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        #rotate2 {
+            animation-name: half_circle;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+
+    <img id="rotate1" src="media/banana.png" width="100" height="100" alt="굴리기">
+    <img id="rotate2" src="media/banana.png" width="100" height="100" alt="흔들기">
+</body>
+</html>

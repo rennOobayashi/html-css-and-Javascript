@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #my_list li:nth-of-type(1) { /*우선 순위가 더 높음(새부적 일수록 더 우선순위가 높음)*/
+            color: lightblue;
+        }
+
+        #my_list li {
+            color: lightpink;
+        }
+
+        li:nth-of-type(2) {
+            color: yellow !important; /*우선 순위가 가장 높음*/
+        }
+    </style>
+</head>
+<body>
+    <ul id="my_list" class="my_list">
+        <li>홍길동</li>
+        <li style="color: lightcoral;">임지메</li>
+        <li>임꺽정</li>
+    </ul>
+</body>
+</html>

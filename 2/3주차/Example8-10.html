@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서의 동작 구성</title>
+</head>
+
+<script>
+    function create_div() {
+        let obj = document.getElementById("parent");
+        let new_div = document.createElement("div");
+
+        new_div.innerHTML = "새로 생성된 DIV입니다.";
+        new_div.setAttribute("id", "My_div");
+        new_div.style.backgroundColor = "yellow";
+
+        new_div.onclick = function() {
+            let p = this.parentElement;
+            p.removeChild(new_div);
+        };
+
+        obj.appendChild(new_div);
+    }
+</script>
+<body id="parent">
+    <h3>div 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+    <hr>
+
+    <p>
+        DOM 트리에서 동적으로 객체를 삽입할 수 있습니다.
+        createElement(), appendChild(), removeChild() 매소드를 이용하여 
+        새로운 객체를 생성, 삽입, 삭제하는 예제입니다.
+    </p>
+
+    <a href="javascript:create_div()">객체를 생성</a>
+    <p></p>
+</body>
+</html>

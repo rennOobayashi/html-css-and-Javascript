@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math를 활용한 구구단 연습</title>
+</head>
+<body>
+    <h3>Math를 활용한 구구단 연습</h3>
+    <hr>
+
+    <script>
+        let ques = randomInt() + " * " + randomInt();
+        let user = parseInt(prompt(ques + "값은 얼마입니까?", ""));
+
+        if (user == null)
+            document.write("구구단 연습을 종료합니다.<br>");
+        else {
+            //let ans = eval(ques);
+            let ans1 = ques.split(" * ")[0];
+            let ans2 = ques.split(" * ")[1];
+
+            if (user == ans1 * ans2) 
+                document.write("정답! ");
+            else
+                document.write("오답! ");
+
+                document.write(`${ques} = <strong> ${ans1 * ans2} </strong>입니다.<br>`);
+        }
+
+        function randomInt() {
+            return Math.floor(Math.random() * 9) + 1;
+        }
+    </script>
+</body>
+</html>

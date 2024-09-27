@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #colorbox {
+            display: inline-block;
+            padding: 10px; 
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h3>17개의 CSS 색이름과 색</h3>
+    <hr>
+
+    <script>
+        let colorNames = [ "maroon", "red", "orange", "yellow", "olive",
+                            "purple", "fuchsia", "white", "lime", "green",
+                            "navy", "blue", "aqua", "teal", "black", "silver", "gray"];
+
+        for (let i = 0; i < colorNames.length; i++) {
+            document.write(`<div id="colorbox" style="background: ${colorNames[i]}">
+                            ${colorNames[i]}</div>${((i + 1) % 7 == 0) ? "<br>" : ""}`);
+        }
+    </script>
+</body>
+</html>

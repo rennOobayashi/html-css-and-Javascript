@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tr1 {
+            text-align: center;
+            font-size: 50px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 2px solid black;
+            transition-duration: 2s, 2s; /*2s 동안 실행, 2s 후 다음 애니메이션 실행*/
+        }
+
+        .tr1:hover {
+            text-align: center;
+            font-size: 100px;
+            width: 200px;
+            height: 200px;
+            background: violet;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1">♧</div>
+</body>
+</html>

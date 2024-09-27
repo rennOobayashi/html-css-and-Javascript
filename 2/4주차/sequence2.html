@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        function format_hex(hex) {
+            return hex.length == 1 ? '0' + hex : hex;
+        }
+
+        const drawSquare = () => {
+            let width = Math.round(Math.random() * 50) + 50;
+            let height = Math.ceil(Math.random() * 50) + 100;
+
+            let r_color = Math.floor(Math.random() * 255).toString(16);
+            let g_color = Math.floor(Math.random() * 255).toString(16);
+            let b_color = Math.floor(Math.random() * 255).toString(16);
+
+            let color = format_hex(r_color) + format_hex(g_color) + format_hex(b_color);
+            let css = `width: ${width}px; height: ${height}px; background: #${color};`;
+            document.getElementById('box').style.cssText = css;
+        };
+
+        drawSquare();
+
+        document.querySelector('#box').onclick = drawSquare; //()를 넣으면 함수의 리턴 값을 넣는 것이 됨
+
+    </script>
+</body>
+</html>

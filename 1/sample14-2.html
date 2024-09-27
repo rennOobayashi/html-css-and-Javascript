@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>띠</title>
+</head>
+
+<style>
+    body { font-size: 1.5em; }
+
+    div {
+        text-align: center;
+
+        border: 1px solid black;
+        padding: 20px;
+        width: 300px;
+    }
+</style>
+<body>
+    <script>
+        let ties = ["원숭이띠", "닭띠", "개띠", "돼지띠", "쥐띠", "소띠", "범띠", "토끼띠", "용띠", "뱀띠", "말띠", "양띠"];
+        let colors = ['red', 'orange', 'green', 'blue', 'navy', 'purple', 'pink', 'brown', 'gray', 'while', 'lightgray'];
+
+        let year = parseInt(prompt("태어난 연도를 입력하세요.", ""));
+        let result = year % 12;
+        let color = colors[result];
+
+        document.write(`<h3>${year}년에 태어난 당신의 띠는 ${ties[result]}입니다.</h3>`);
+        document.write(`<div style="background-color: ${color};">행운의 색은 ${color}</div>`);
+
+    </script>
+</body>
+</html>
