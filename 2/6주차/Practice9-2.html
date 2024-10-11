@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function print_img() {
+            const selected_fruits = document.querySelector(`input[name="fruits"]:checked`);
+
+            console.log(selected_fruits.value);
+
+            if (selected_fruits) {
+                document.getElementById("img").src = "media/" + selected_fruits.value + ".png";
+            }   
+        }
+    </script>
+</head>
+<body onload="print_img()">
+    <h3>라디오 버튼</h3>
+    <hr>
+
+    <form>
+        <input type="radio" name="fruits" value="banana" onclick="print_img()"> 바나나
+        <input type="radio" name="fruits" value="mango"  onclick="print_img()"> 망고
+        <input type="radio" name="fruits" value="apple"  onclick="print_img()" checked> 사과
+        <br>
+        
+        <img id="img" src="" width="120px" height="120px" alt="">
+    </form>
+</body>
+</html>

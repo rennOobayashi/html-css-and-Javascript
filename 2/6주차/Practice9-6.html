@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ctrl_img_size(ev, img) {
+            if (ev.wheelDelta > 0) {
+                img.width -= img.width * 0.05;
+                img.height -= img.height * 0.05;
+            }
+            else {
+                img.width += img.width * 0.05;
+                img.height += img.height * 0.05;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 휠</h3>
+    <hr>
+
+    <p>
+        이미지 위에 휠을 위로, 아래로 굴림
+    </p>
+
+    <img src="media/Tulips.png" width="280px" height="210px" 
+        onmousewheel="ctrl_img_size(event, this)" alt="">
+</body>
+</html>
