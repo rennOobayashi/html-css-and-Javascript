@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 닫기</title>
+    <script>
+        let new_win = null;
+
+        function load(url) {
+            new_win = window.open(url, "My win", "left=300px, top=300px, width=400px, height=300px");
+        }
+
+        function close_new_window() {
+            if (new_win == null) {
+                return;
+            } else {
+                new_win.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>window의 close()로 윈도우 닫기</h3>
+    <hr>
+
+    <a href="javascript:load('https://www.disneyworld.com')">
+        새 윈도우 열기(디즈니 월드)
+    </a> <br>
+    <a href="javascript:close_new_window()">
+        새 윈도우 닫기
+    </a> <br>
+
+    <a href="javascript:window.close()">
+        현재 윈도우 닫기
+    </a>
+
+</body>
+</html>

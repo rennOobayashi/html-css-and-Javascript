@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Student {
+            constructor(이름, 국어, 영어, 수학, 과학) {
+                this.이름 = 이름;
+                this.국어 = 국어;
+                this.영어 = 영어;
+                this.수학 = 수학;
+                this.과학 = 과학;
+            }
+            get_sum() {
+                return this.국어 + this.영어 + this.수학 + this.과학;
+            }
+            get_average() {
+                return this.get_sum() / 4;
+            }
+            to_string() {
+                return `<tr> <td> ${this.이름} </td> <td> ${this.국어}점 </td> <td> ${this.영어}점 </td> 
+                                                     <td> ${this.수학}점 </td> <td> ${this.과학}점 </td> </tr>`;
+            }
+        }
+
+        const students = [];
+
+        students.push(new Student("구름", 87, 98, 88, 90));
+        students.push(new Student("별이", 92, 98, 96, 88));
+        students.push(new Student("겨울", 76, 96, 94, 86));
+        students.push(new Student("바다", 98, 52, 98, 92));
+
+        for (const s of students) {
+            document.write(` ${s.이름} &nbsp; &nbsp; ${s.국어}점 &nbsp; &nbsp; ${s.영어}점 
+                                      &nbsp; &nbsp; ${s.수학}점 &nbsp; &nbsp; ${s.과학}점<br>`);
+        }
+        
+        document.write("=========================<br>");
+
+        document.write("<table>");
+        document.write(`<tr> <td> 이름 </td> <td> 총점 </td> <td> 평균 </td> </tr>`);
+
+        for (const s of students) {
+            document.write(s.to_string());
+        }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

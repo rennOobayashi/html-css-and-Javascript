@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout()으로 웹 페이지 자동 연결</title>
+</head>
+<body>
+    <h3>이미지에 마우스를 올리고 5초간 그대로 있을 때 사이트로 이동합니다.</h3>
+    <hr>
+
+    <img id="img" src="media/apple.png" 
+    onmouseover="start_timer(5000)" onmouseout="cancel_timer()">
+
+    <script>
+        let timerID = null;
+
+        function start_timer(time) {
+            timerID = setTimeout("load('https://www.inhatc.ac.kr')", time);
+
+            document.getElementById('img').title = "타이머 작동 시작...";
+        }
+
+        function cencel_timer() {
+            if (timerID != null) {
+                clearTimeout(timerID);
+            }
+        }
+
+        function load(url) {
+            window.location = url;
+        }
+    </script>
+</body>
+</html>
